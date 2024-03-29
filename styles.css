@@ -1,0 +1,168 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('Matematicas.jpg'); /* Imagen-de-fondo.jpg' */
+    background-size: cover; /* Ajustar el tamaño de la imagen al tamaño de la ventana */
+    background-position: center; /* Centra la imagen de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para resaltar el contenido */
+    background-size: 100% 100%; /* Ajusta el tamaño de la imagen al 100% de la anchura y altura del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    padding: 20px; /* Reducir el padding para cambiarel tamaño del contenedor */
+    border-radius: 20px; /* Reducir el radio de borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(10px 5px 2px #4444dd);
+}
+
+/* Diseño responsive */
+
+/* Hacer que el contenedor de autenticación se ajuste al ancho de la pantalla */
+#auth-container {
+    max-width: 400px; /* Ancho máximo del contenedor */
+    margin-left: auto; /* Centrar el contenedor horizontalmente */
+    margin-right: auto; 
+}
+
+/* Ajustar el tamaño de los formularios de inicio de sesión y registro */
+#login-form, #register-form {
+    width: 100%; /* Hacer que el formulario ocupe todo el ancho disponible */
+    margin-top: 10px;
+}
+
+/* Ajustar el tamaño de los campos de entrada en los formularios */
+input[type="text"], input[type="password"] {
+    margin: 5px 0;
+    padding: 8px;
+    width: 100px; /* Hacer que los campos de entrada ocupen todo el ancho del formulario */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Ajustar el tamaño de los campos de entrada en los formularios */
+input[type="text"], input[type="password"] {
+    width: 50%; /* Hacer que los campos de entrada ocupen todo el ancho del formulario */
+}
+
+/* Hacer que el contenedor del juego se ajuste al ancho de la pantalla */
+#game-container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin-left: auto; /* Centrar el contenedor horizontalmente */
+    margin-right: auto;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #3498db;
+}
+
+h1 {
+    font-size: 2em; /* Cambiar el tamaño del titulo */
+}
+
+button {
+    padding: 5%; /* Cambiar el tamaño del padding de los botones */
+    margin-top: 8%; /* Cambiar el espacio entre los botones */
+    cursor: pointer;
+    border: 2px solid #000; /* Cambia el color del borde según tus preferencias */
+    border-radius: 5px; /* Añade esquinas redondeadas si lo deseas */
+    font-weight: bold; /* Hace el texto del botón más grueso */
+    background-color: #3498db; /* Cambia el color de fondo según tus preferencias */
+    color: #fff; /* Cambia el color del texto del botón a blanco o un contraste adecuado */
+    font-size: 1em; /* Cambiar el tamaño del texto de los botones */
+}
+
+button:hover {
+    background-color: #297fb8; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+button:focus, input:focus {
+    outline: 2px solid #3498db; /* Añade un contorno cuando el elemento esté enfocado */
+}
+
+
+#answer {
+    width: 200px /* Cambiar el ancho del campo de respuesta */
+    padding 8px; /* Cambiar el padding del campo de respuesta */
+    font-size: 1em; /* Cambiar el tamaño del texto del campo de respuesta */
+}
+
+/* Para hacer los emojis más grandes, aumentamos el tamaño de la fuente en #result-message */
+#result-message {
+    max-width: 200px; /* Ancho máximo del mensaje */
+    margin: 0 auto; 
+}
+
+/* Hacemos que el diseño sea más responsivo */
+@media screen and (max-width: 1200px) {
+    .container, #auth-container {
+        max-width: 90%; /* Hacer el contenedor más ancho dispositivos pequeños */
+    }
+
+    button {
+        padding: 10px; /* Aumentar el padding para botones más grandes en dispositivos pequeños */
+        font-size: 1.5em; /* Aumentar el tamaño del texto para mejorar la legibilidad */
+        margin-top: 5%; /* Reducir el espacio entre botones para dispositivos pequeños */
+    }
+
+    #answer {
+        width: 100% /* Ajustar el ancho del input para que se adapte al contenedor */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ajustar el tamaño del titulo para dispositivos más pequeños */
+    }
+}
+
+/* Agregar estilos para los botones de usuario y contraseña */
+#login-form button,
+#register-form button {
+    color: #fff; /* Cambia el color del texto a blanco */
+    font-size: 1em; /* Cambia el tamaño del texto */
+    padding: 10px 20px; /* Cambia el padding para ajustar el tamaño */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    margin-top: 20px; /* Ajustar el espacio cuperior */
+}
+
+#login-form button:hover,
+#register-form button:hover {
+    background-color: #c0392b; /* Cambia el color de fondo al pasar el raton */
+}
+
+/* Ajustar el tamaño de los botones de números */
+#number-buttons button {
+    width: 20%; /* Hacer que los botones de números ocupen el 30% del ancho del contenedor */
+    margin: 5px; /* Agregar un pequeño margen entre los botones */
+}
+
+/* CSS agregado para los cambios solicitados */
+
+.answer-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 10px; /* Espacio adicional abajo */
+}
+
+.answer-container input[type="text"] {
+    width: 150px; /* Reducir el ancho del campo de respuesta */
+    margin: 10px; /* Espacio entre los elementos respuesta y verificar */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 10px; /* Espacio adicional arriba */
+}
+
+.button-container button {
+    width: calc(50% - 5px); /* Ancho del 50% menos el margen */
+    margin: 0; /* Eliminar el margen */
+}
+

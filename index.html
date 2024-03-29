@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Juego de Matemáticas</title>
+</head>
+<body>
+    <div id="auth-container">
+        <h2>Iniciar Sesión / Registrarse</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <form id="register-form">
+            <input type="text" id="register-username" placeholder="Nombre de usuario" required>
+            <input type="password" id="register-password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+    <div class="container" id="game-container">
+        <button id="logout-btn" onclick="logout()">Cerrar Sesión</button> 
+        <h1>Juego de Matemáticas</h1>
+        <div id="exercise-container">
+            <!-- Aqui se mostrará el ejercicio -->
+        </div>
+        <div id="number-buttons" style="display:none;">
+            <!-- Botones con diferentes números -->
+            <button onclick="selectNumber(1)">1</button>
+            <button onclick="selectNumber(2)">2</button>
+            <button onclick="selectNumber(3)">3</button>
+        </div>
+        <div class="answer-container"> <!-- Contenedor adicional para respuesta y botón Verificar -->
+            <input type="text" id="answer" placeholder="Ingrese su respuesta">
+            <button onclick="checkAnswer()">Verificar</button>
+        </div>
+        <p id="result-message"></p>
+        <div class="button-container"> <!-- Contenedor adicional para botón Nuevo ejercicio -->
+            <button onclick="generateExercise()">Nuevo Ejercicio</button>
+            <button onclick="showExerciseScreen()">Ir a Ejercicios (+,-,x)</button> <!-- Agregado -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
